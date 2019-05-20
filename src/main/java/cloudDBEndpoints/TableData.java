@@ -1359,9 +1359,17 @@ public class TableData extends HttpServlet {
                 tablesBeingCalled.add(joinJObj.get("join_with_table").toString());
             }
             joinWithTable = joinJObj.get("join_with_table").toString();
-            select.addJoin(new Join(sqlType, joinJObj.get("join_with_table").toString(),
-                                joinJObj.get("name").toString() + '.' + joinJObj.get("column_name").toString(),
-                                joinWithTable + '.' + joinJObj.get("join_with_column_name").toString()));
+            if (joinJObj.containsKey("join_with_table_as")) {
+                select.addJoin(new Join(sqlType, joinJObj.get("join_with_table").toString(),
+                                    joinJObj.get("join_with_table_as").toString(),
+                        joinJObj.get("name").toString() + '.' + joinJObj.get("column_name").toString(),
+                        joinJObj.get("join_with_table_as").toString() + '.' + joinJObj.get("join_with_column_name").toString()));
+            } else {
+                select.addJoin(new Join(sqlType, joinJObj.get("join_with_table").toString(),
+                        joinJObj.get("name").toString() + '.' + joinJObj.get("column_name").toString(),
+                        joinWithTable + '.' + joinJObj.get("join_with_column_name").toString()));
+            }
+            
             // Check if there are more joins.
             if (joinJObj.containsKey("join")) {
                 // There are more Joins.

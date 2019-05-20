@@ -228,6 +228,7 @@ public class C {
 	    public static final String DATABASE_ID = "database_id";
 	    public static final String NAME = "name";
 	    public static final String SYNCABLE = "syncable";
+	    public static final String MULTI_TENANT = "multi_tenant";
 	    public static final String TIME_STAMP = "time_stamp";
 
 	}

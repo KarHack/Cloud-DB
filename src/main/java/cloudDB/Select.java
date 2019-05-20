@@ -282,6 +282,31 @@ public class Select {
         }
     }
 
+    // Set the Type of Query as Sum.
+    boolean hasSumColumns = false;
+
+    public Select sum(String columnName) {
+        try {
+            // Here we will Add the Sum Column.
+            type = Type.SUM;
+            if (hasSumColumns) {
+                columnNameBuilder.append(",");
+            } else {
+                // This is the First time.
+                hasSumColumns = true;
+                columnNameBuilder = new StringBuilder();
+            }
+            columnNameBuilder.append(" SUM(")
+                                .append(columnName)
+                                .append(") as ")
+                                .append(columnName);
+            return this;
+        } catch (Exception e) {
+            // There was an Error.
+            return this;
+        }
+    }
+
     // Let the user to add the Columns to the Query.
     // Allow the user to add columns.
     public Select addColumn(String columnName) {

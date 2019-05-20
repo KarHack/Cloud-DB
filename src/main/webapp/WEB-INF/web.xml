@@ -72,6 +72,10 @@
         <servlet-name>ExtractDeviceKey</servlet-name>
         <servlet-class>cloudDBEndpoints.ExtractDeviceKey</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Table/Data/Sum</servlet-name>
+        <servlet-class>cloudDBEndpoints.Sum</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Tester</servlet-name>
         <url-pattern>/Tester</url-pattern>
@@ -144,6 +148,10 @@
     <servlet-mapping>
         <servlet-name>ExtractDeviceKey</servlet-name>
         <url-pattern>/Generate/DeviceKey</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Table/Data/Sum</servlet-name>
+        <url-pattern>/Table/Data/Sum</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

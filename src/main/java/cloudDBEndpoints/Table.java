@@ -152,6 +152,7 @@ public class Table extends HttpServlet {
 			.addColumn(C.Tables.Table.NAME)
 			.addColumn(C.Tables.Table.DATABASE_ID)
 			.addColumn(C.Tables.Table.SYNCABLE)
+                        .addColumn(C.Tables.Table.MULTI_TENANT)
 			.addColumn(C.Tables.Table.TIME_STAMP)
 			.from(C.Tables.TABLES)
 			.addWhere(new Where("database_id", Where.Type.EQUAL, cdb.getDatabaseID()));
