@@ -2,6 +2,8 @@
 Offline Syncing Database Wrapper with Row Level Security &amp; Multi-tenancy capabilities.  Allows applications to work in Low to No Internet Connectivity mode.  Automatically synchronizes data when the device was offline.
 This is a thin wrapper which allows the user to interact with the database & enables the following functionalities.
 
+Apologize for the lack of Documentation
+
 # Goal
 To allow developers to build scalable offline first apps without any compromise.
 
