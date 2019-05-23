@@ -41,3 +41,8 @@ We allow the developer to perform Joins & take advantage of ACID properties to a
 # Changelog
 1. Initial Commit. This has the stable version of V0.1 of Cloud DB.  It syncs data according to the RLS & works with multiple tenants. 
 2. Small Bug Fixes.
+
+# Dependencies
+Cloud Push Server : https://github.com/KarHack/CloudPush
+Cloud DB Client (.Net) : https://github.com/KarHack/CloudDBClientDotNet
+Cloud Push Client (.Net) : https://github.com/KarHack/CloudPushClientDotNet
